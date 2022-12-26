@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/western_food_bck_img"
+    android:gravity="center"
+    tools:context=".AddRecipe">
+
+    <!--EditText for adding recipe name-->
+    <EditText
+        android:id="@+id/idEdtRecipeName"
+        android:layout_width="385dp"
+        android:layout_height="59dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Recipe Name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
+
+    <!--EditText for adding ingredients-->
+    <EditText
+        android:id="@+id/idEdtIngredients"
+        android:layout_width="387dp"
+        android:layout_height="102dp"
+        android:layout_below="@id/idEdtRecipeName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Ingredients"
+        android:importantForAutofill="no"
+        android:inputType="phone" />
+
+    <!--EditText for adding instructions-->
+    <EditText
+        android:id="@+id/idEdtInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        android:layout_below="@id/idEdtIngredients"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Instructions"
+        android:inputType="textPostalAddress" />
+
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnSendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtInstructions"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/heartGreen"
+        android:text="Add Recipe"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
