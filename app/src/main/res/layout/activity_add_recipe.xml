@@ -19,7 +19,7 @@
         android:layout_marginBottom="10dp"
         android:hint="Enter Recipe Name"
         android:importantForAutofill="no"
-        android:inputType="textPersonName" />
+        android:inputType="text" />
 
     <!--EditText for adding ingredients-->
     <EditText
@@ -33,7 +33,7 @@
         android:layout_marginBottom="10dp"
         android:hint="Enter Ingredients"
         android:importantForAutofill="no"
-        android:inputType="phone" />
+        android:inputType="text" />
 
     <!--EditText for adding instructions-->
     <EditText
@@ -46,7 +46,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:hint="Enter Instructions"
-        android:inputType="textPostalAddress" />
+        android:inputType="text" />
 
     <!--Button for adding data to Firebase-->
     <Button

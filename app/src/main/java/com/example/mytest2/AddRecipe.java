@@ -18,21 +18,15 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AddRecipe extends AppCompatActivity {
 
-    // creating variables for
-    // EditText and buttons.
-    private EditText recipeNameEdt, ingredientsEdt, instructionsEdt;
-    private Button sendRecipebtn;
 
-    // creating a variable for my
-    // Firebase Database.
+    EditText recipeNameEdt, ingredientsEdt, instructionsEdt;
+    Button sendRecipebtn;
+
     FirebaseDatabase firebaseDatabase;
 
-    // creating a variable for my Database
-    // Reference for Firebase.
+
     DatabaseReference databaseReference;
 
-    // creating a variable for
-    // my object class
     RecipeInfo recipeInfo;
 
     @SuppressLint("MissingInflatedId")
@@ -41,17 +35,15 @@ public class AddRecipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
 
-        // initializing my edittext and button
         recipeNameEdt = findViewById(R.id.idEdtRecipeName);
         ingredientsEdt = findViewById(R.id.idEdtIngredients);
         instructionsEdt = findViewById(R.id.idEdtInstructions);
 
-        // below line is used to get the
-        // instance of my Firebase database.
+        // below line is used to get the instance of my firebase database
         firebaseDatabase = FirebaseDatabase.getInstance();
 
 
-        databaseReference = firebaseDatabase.getReference("EmployeeInfo");
+        databaseReference = firebaseDatabase.getReference("Recipes");
 
         
         recipeInfo = new RecipeInfo();
@@ -63,21 +55,17 @@ public class AddRecipe extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // getting text from our edittext fields.
                 String name = recipeNameEdt.getText().toString();
-                String phone = ingredientsEdt.getText().toString();
-                String address = instructionsEdt.getText().toString();
+                String ingredients = ingredientsEdt.getText().toString();
+                String instructions = instructionsEdt.getText().toString();
 
-                // below line is for checking whether the
-                // edittext fields are empty or not.
-                if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phone) && TextUtils.isEmpty(address)) {
-                    // if the text fields are empty
-                    // then show the below message.
+
+                if (TextUtils.isEmpty(name) && TextUtils.isEmpty(ingredients) && TextUtils.isEmpty(instructions)) {
+                    // if the text fields are empty show the below message
                     Toast.makeText(AddRecipe.this, "Please add some data.", Toast.LENGTH_SHORT).show();
                 } else {
-                    // else call the method to add
-                    // data to my database.
-                    addDatatoFirebase(name, phone, address);
+                    // else call the method to add data
+                    addDatatoFirebase(name, ingredients, instructions);
                 }
             }
         });
