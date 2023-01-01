@@ -17,9 +17,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="Enter Recipe Name"
-        android:importantForAutofill="no"
-        android:inputType="text" />
+        android:hint="Enter Recipe Name" />
 
     <!--EditText for adding ingredients-->
     <EditText
@@ -31,9 +29,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="Enter Ingredients"
-        android:importantForAutofill="no"
-        android:inputType="text" />
+        android:hint="Enter Ingredients" />
 
     <!--EditText for adding instructions-->
     <EditText
@@ -45,8 +41,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="Enter Instructions"
-        android:inputType="text" />
+        android:hint="Enter Instructions" />
 
     <!--Button for adding data to Firebase-->
     <Button

@@ -46,7 +46,7 @@ public class RecipeVerAdapter extends RecyclerView.Adapter<RecipeVerAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_ver_item,parent,false));
+
         favDB = new FavDB(context);
         //create table on first
         SharedPreferences prefs = context.getSharedPreferences("prefs", Context.MODE_PRIVATE);
