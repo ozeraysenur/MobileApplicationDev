@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         card2 =(CardView) findViewById(R.id.cardview_add_recipe);
         card3 =(CardView) findViewById(R.id.cardview_favorites);
         card4 =(CardView) findViewById(R.id.cardview_find_recipe);
-        //card5 =(CardView) findViewById(R.id.cardview_profile_set);
-        //card6 =(CardView) findViewById(R.id.cardview_settings);
+        card5 =(CardView) findViewById(R.id.cardview_profile_set);
+        card6 =(CardView) findViewById(R.id.cardview_settings);
 
 
         card1.setOnClickListener(this);
         card2.setOnClickListener(this);
         card3.setOnClickListener(this);
         card4.setOnClickListener(this);
-        //card5.setOnClickListener(this);
-        //card6.setOnClickListener(this);
+        card5.setOnClickListener(this);
+        card6.setOnClickListener(this);
 
 
 
@@ -62,6 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i= new Intent(this,RecipeFinder.class);
                 startActivity(i);
                 break;
+            case R.id.cardview_profile_set:
+                i= new Intent(this,ProfileSettings.class);
+                startActivity(i);
+            case R.id.cardview_settings:
+                i = new Intent(this,Settings.class);
+                startActivity(i);
         }
 
     }

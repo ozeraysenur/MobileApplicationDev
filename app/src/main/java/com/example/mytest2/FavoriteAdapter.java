@@ -83,6 +83,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
                     removeItem(position);
 
                     upvotesRefLike.runTransaction(new Transaction.Handler() {
+                        //set favoriteId to 0 or 1.By default its 0, when user add recipe to favorite it become 1.
                         @NonNull
                         @Override
                         public Transaction.Result doTransaction(@NonNull final MutableData mutableData) {
@@ -101,7 +102,6 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.ViewHo
 
                         @Override
                         public void onComplete(@Nullable DatabaseError databaseError, boolean b, @Nullable DataSnapshot dataSnapshot) {
-                            System.out.println("Transaction completed");
                         }
                     });
                 }

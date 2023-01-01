@@ -59,6 +59,7 @@ public class FavoritesFragment extends Fragment {
         SQLiteDatabase db = favDB.getReadableDatabase();
         Cursor cursor = favDB.select_all_favorite_list();
         try {
+            // a loop for traversing through db and add data to list.
             while (cursor.moveToNext()) {
                 @SuppressLint("Range") String title = cursor.getString(cursor.getColumnIndex(FavDB.ITEM_TITLE));
                 @SuppressLint("Range") String id = cursor.getString(cursor.getColumnIndex(FavDB.KEY_ID));
