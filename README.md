@@ -33,7 +33,29 @@ Customize your profile with personal information, and edit it at any time to kee
 5. **Edit Profile**:  
    Keep your personal details up-to-date by editing your profile.
 
-## Screenshots 📸
+## 📸 Screenshots
+
+### **Login Screen**
+![Login Screen](login.png)
+
+### **Main Dashboard**
+![Main Dashboard](mainpage.png)
+
+### **Recipe Finder**
+![Recipe Finder](searchrecipes.png)
+
+### **Favorites**
+![Favorites](favorites.png)
+
+### **Recipes**
+![Favorites](recipes.png)
+
+### **Add Recipe**
+![Favorites](addrecipe.png)
+
+### **User Profile**
+![Favorites](userprofile.png)
+
 
 
 
